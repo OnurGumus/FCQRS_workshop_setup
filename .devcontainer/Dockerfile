@@ -1,3 +1,6 @@
+# SOURCE of the prebaked devcontainer image. Codespaces no longer build this
+# directly — devcontainer.json pulls the image baked from this file by
+# .github/workflows/devcontainer-image.yaml (pushed to GHCR on changes here).
 # Reproducible toolchain for the workshop. .NET 11 is still preview and C# 15
 # `union` needs LangVersion preview, so we install the *exact* SDK pinned in
 # global.json with the official script rather than depend on a moving image tag —

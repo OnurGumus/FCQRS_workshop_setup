@@ -1,6 +1,9 @@
 {
   "name": "FCQRS_workshop_setup",
-  "build": { "dockerfile": "Dockerfile" },
+  // Prebaked on GHCR by .github/workflows/devcontainer-image.yaml (source:
+  // .devcontainer/Dockerfile). Pulling beats every attendee downloading and
+  // installing the SDK during Codespace creation (~8 min -> ~1 min cold start).
+  "image": "ghcr.io/onurgumus/fcqrs-workshop-dotnet11:11.0.100-preview.5.26302.115",
   "forwardPorts": [5000],
   "portsAttributes": {
     "5000": { "label": "focument web", "onAutoForward": "openBrowser" }
